@@ -355,17 +355,39 @@
 
       
         
-          <h2 id="一、组件说明"><a href="#一、组件说明" class="headerlink" title="一、组件说明"></a>一、组件说明</h2><ul>
+          
+            <h2 id="一、组件说明"><a href="#一、组件说明" class="headerlink" title="一、组件说明"></a>一、组件说明</h2><ul>
 <li><strong>Hexo：</strong> 是一个基于Node.js的一个静态博客框架</li>
-<li><strong>码云：</strong> 由国内源码中国提供的Git免费仓库，大于等于Github</li>
-<li><strong>Git：</strong> 是一个开源的分布式版本控制系统，用于项目版本、源码管理
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/27/搭建个人免费静态博客：Hexo+码云+Git/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<li><strong>码云：</strong> 由国内源码中国提供，基于Git的免费仓库</li>
+<li><strong>Git：</strong> 是一个开源的分布式版本控制系统，用于项目版本、源码管理</li>
+</ul>
+<h2 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h2><blockquote>
+<p><strong>本文环境：Windows</strong></p>
+<ol>
+<li><strong>注册码云：</strong> <a href="https://gitee.com" target="_blank" rel="noopener">https://gitee.com</a></li>
+<li><strong>下载nodejs：</strong> <a href="https://nodejs.org/en/download" target="_blank" rel="noopener">https://nodejs.org/en/download</a></li>
+<li><strong>下载Git：</strong> <a href="https://git-scm.com/download" target="_blank" rel="noopener">https://git-scm.com/download</a></li>
+</ol>
+</blockquote>
+<h2 id="三、开始安装"><a href="#三、开始安装" class="headerlink" title="三、开始安装"></a>三、开始安装</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><blockquote>
+<p>安装步骤参考：<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#切换npm为淘宝镜像</span></span><br><span class="line">npm config <span class="built_in">set</span> registry http://registry.cnpmjs.org</span><br></pre></td></tr></table></figure>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><blockquote>
+<p><strong>hexo官网：</strong> <a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a></p>
+</blockquote>
+<p><strong>CMD命令行</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#全局安装Hexo命令行工具</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment">#查看hexo版本</span></span><br><span class="line">hexo -v</span><br><span class="line"><span class="comment">#创建一个目录用来存放Hexo源码</span></span><br><span class="line">mkdir c:\hexo</span><br><span class="line"><span class="comment">#切换进hexo目录</span></span><br><span class="line"><span class="built_in">cd</span> /d c:\hexo</span><br><span class="line"><span class="comment">#初始化hexo</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment">#安装hexo git发布工具</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置hexo指定Git仓库地址"><a href="#配置hexo指定Git仓库地址" class="headerlink" title="配置hexo指定Git仓库地址"></a>配置hexo指定Git仓库地址</h3><blockquote>
+<p>先在码云上创建一个项目，复制项目地址。<br>本文使用项目地址为<a href="https://gitee.com/geekops/geekops_blog.git" target="_blank" rel="noopener">https://gitee.com/geekops/geekops_blog.git</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#全局安装Hexo命令行工具</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment">#查看hexo版本</span></span><br><span class="line">hexo -v</span><br><span class="line"><span class="comment">#创建一个目录用来存放Hexo源码</span></span><br><span class="line">mkdir c:\hexo</span><br><span class="line"><span class="comment">#切换进hexo目录</span></span><br><span class="line"><span class="built_in">cd</span> /d c:\hexo</span><br><span class="line"><span class="comment">#初始化hexo</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment">#安装hexo git发布插件</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#修改hexo目录下_config.yml配置文件中deploy字段的配置，指定Git项目地址</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://gitee.com/geekops/geekops_blog.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下载next主题</span></span><br><span class="line"><span class="comment">#解压所下载的压缩包至hexo站点的 themes 目录下， 并将 解压后的文件夹名称更改为next。</span></span><br><span class="line">https://github.com/iissnan/hexo-theme-next/releases</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#清空缓存与静态文件</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="comment">#生成静态文件hexo g</span></span><br><span class="line">hexo generate</span><br><span class="line"><span class="comment">#启动服务器hexo s</span></span><br><span class="line">hexo server</span><br><span class="line"><span class="comment">#发布代码到远程站点（git），要输入github的账号密码</span></span><br><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line"><span class="comment">#常用组合</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://my.oschina.net/ruowu/blog/1492038" target="_blank" rel="noopener">https://my.oschina.net/ruowu/blog/1492038</a><br><a href="https://www.jianshu.com/p/b7886271e21a" target="_blank" rel="noopener">https://www.jianshu.com/p/b7886271e21a</a><br><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="noopener">https://www.cnblogs.com/visugar/p/6821777.html</a><br><a href="http://www.adki.me/1688.html" target="_blank" rel="noopener">http://www.adki.me/1688.html</a></p>
+
+          
         
       
     </div>
