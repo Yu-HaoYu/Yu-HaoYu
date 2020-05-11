@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="一、组件说明 Hexo： 是一个基于Node.js的一个静态博客框架 码云： 由国内源码中国提供的Git免费仓库，大于等于Github Git： 是一个开源的分布式版本控制系统，用于项目版本、源码管理">
+<meta name="description" content="一、组件说明 Hexo： 是一个基于Node.js的一个静态博客框架 码云： 由国内源码中国提供，基于Git的免费仓库 Git： 是一个开源的分布式版本控制系统，用于项目版本、源码管理  二、准备工作 本文环境：Windows  注册码云： https://gitee.com 下载nodejs： https://nodejs.org/en/download 下载Git： https://git-s">
 <meta name="keywords" content="Hexo,个人博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建个人免费静态博客：Hexo+码云+Git">
 <meta property="og:url" content="https://yu-haoyu.github.io/2018/01/27/搭建个人免费静态博客：Hexo+码云+Git/index.html">
 <meta property="og:site_name" content="爱求知">
-<meta property="og:description" content="一、组件说明 Hexo： 是一个基于Node.js的一个静态博客框架 码云： 由国内源码中国提供的Git免费仓库，大于等于Github Git： 是一个开源的分布式版本控制系统，用于项目版本、源码管理">
+<meta property="og:description" content="一、组件说明 Hexo： 是一个基于Node.js的一个静态博客框架 码云： 由国内源码中国提供，基于Git的免费仓库 Git： 是一个开源的分布式版本控制系统，用于项目版本、源码管理  二、准备工作 本文环境：Windows  注册码云： https://gitee.com 下载nodejs： https://nodejs.org/en/download 下载Git： https://git-s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wordpress2files-1251287929.file.myqcloud.com/images/QQ%E6%88%AA%E5%9B%BE20180129105152.jpg">
-<meta property="og:image" content="http://wordpress2files-1251287929.file.myqcloud.com/images/QQ%E6%88%AA%E5%9B%BE20180129105137.jpg">
-<meta property="og:updated_time" content="2020-05-10T10:49:44.635Z">
+<meta property="og:updated_time" content="2020-05-11T07:22:04.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建个人免费静态博客：Hexo+码云+Git">
-<meta name="twitter:description" content="一、组件说明 Hexo： 是一个基于Node.js的一个静态博客框架 码云： 由国内源码中国提供的Git免费仓库，大于等于Github Git： 是一个开源的分布式版本控制系统，用于项目版本、源码管理">
-<meta name="twitter:image" content="http://wordpress2files-1251287929.file.myqcloud.com/images/QQ%E6%88%AA%E5%9B%BE20180129105152.jpg">
+<meta name="twitter:description" content="一、组件说明 Hexo： 是一个基于Node.js的一个静态博客框架 码云： 由国内源码中国提供，基于Git的免费仓库 Git： 是一个开源的分布式版本控制系统，用于项目版本、源码管理  二、准备工作 本文环境：Windows  注册码云： https://gitee.com 下载nodejs： https://nodejs.org/en/download 下载Git： https://git-s">
 
 
 
@@ -358,9 +355,8 @@
       
         <h2 id="一、组件说明"><a href="#一、组件说明" class="headerlink" title="一、组件说明"></a>一、组件说明</h2><ul>
 <li><strong>Hexo：</strong> 是一个基于Node.js的一个静态博客框架</li>
-<li><strong>码云：</strong> 由国内源码中国提供的Git免费仓库，大于等于Github</li>
-<li><strong>Git：</strong> 是一个开源的分布式版本控制系统，用于项目版本、源码管理<a id="more"></a>
-</li>
+<li><strong>码云：</strong> 由国内源码中国提供，基于Git的免费仓库</li>
+<li><strong>Git：</strong> 是一个开源的分布式版本控制系统，用于项目版本、源码管理</li>
 </ul>
 <h2 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h2><blockquote>
 <p><strong>本文环境：Windows</strong></p>
@@ -387,7 +383,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#清空缓存与静态文件</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="comment">#生成静态文件hexo g</span></span><br><span class="line">hexo generate</span><br><span class="line"><span class="comment">#启动服务器hexo s</span></span><br><span class="line">hexo server</span><br><span class="line"><span class="comment">#发布代码到远程站点（git），要输入github的账号密码</span></span><br><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line"><span class="comment">#常用组合</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://my.oschina.net/ruowu/blog/1492038" target="_blank" rel="noopener">https://my.oschina.net/ruowu/blog/1492038</a><br><a href="https://www.jianshu.com/p/b7886271e21a" target="_blank" rel="noopener">https://www.jianshu.com/p/b7886271e21a</a><br><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="noopener">https://www.cnblogs.com/visugar/p/6821777.html</a><br><a href="http://www.adki.me/1688.html" target="_blank" rel="noopener">http://www.adki.me/1688.html</a></p>
-<p><img src="http://wordpress2files-1251287929.file.myqcloud.com/images/QQ%E6%88%AA%E5%9B%BE20180129105152.jpg" alt="image"><br><img src="http://wordpress2files-1251287929.file.myqcloud.com/images/QQ%E6%88%AA%E5%9B%BE20180129105137.jpg" alt="image"></p>
 
       
     </div>
